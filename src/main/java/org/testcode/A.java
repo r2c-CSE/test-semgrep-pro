@@ -9,4 +9,9 @@ public class A {
         org.owasp.benchmark.helpers.DatabaseHelper.outputUpdateComplete(sql, response);
     }
 
+    public void verySuspiciousCall(java.sql.Statement statement, String sql, HttpServletResponse response) throws java.sql.SQLException {
+        int count = statement.executeUpdate(sql);
+        org.owasp.benchmark.helpers.DatabaseHelper.outputUpdateComplete(sql, response);
+    }
+
 }
